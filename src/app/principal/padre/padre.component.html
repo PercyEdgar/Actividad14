@@ -1,0 +1,18 @@
+<form class="form form-group container-sm border-shadow">
+    <h1 class="text-primary text-center">Registro de personas</h1>
+    <label>Nombre:</label>
+    <input [(ngModel)]="nombre" name="nombre" class="form-control">
+    <br>
+    <label>DNI:</label>
+    <input [(ngModel)]="dni" name="dni" class="form-control">
+    <br>
+    <label>Estado Civil:</label>
+    <select [(ngModel)]="estadoCivil" name="estadoCivil" class="form-select">
+    <option value="soltero">Soltero</option>
+    <option value="casado">Casado</option>
+    </select>
+    <br>
+    <button (click)="enviarDatos()" class="btn btn-success">Enviar</button>
+</form>
+    
+    <app-hijo [datosForm]="datos"></app-hijo>
