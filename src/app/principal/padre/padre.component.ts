@@ -6,6 +6,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./padre.component.css']
 })
 export class PadreComponent {
+datos_padre: string = "";
 
 nombre: string ="";
 dni: string ="";

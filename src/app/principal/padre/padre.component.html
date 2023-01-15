@@ -1,18 +1,32 @@
-<form class="form form-group container-sm border-shadow">
-    <h1 class="text-primary text-center">Registro de personas</h1>
-    <label>Nombre:</label>
-    <input [(ngModel)]="nombre" name="nombre" class="form-control">
+<form class="form form-group container-sm bg-light">
+    <h1 class="text-center">Reto 14 - Comunicacion Padre - Hijo</h1>
+
+
+    <label for="mensaje">Ingrese su mensaje:</label>
+    <input type="text" name="mensaje" [(ngModel)]="datos_padre" class="form-control border border-secondary">
+    <app-hijo2 [mensaje_padre]="datos_padre"></app-hijo2>
+</form>
+
+
+
+<form class="form form-group container-sm border border-shadow bg-warning bg-gradient">
+    <h1 class="text-primary text-center">Actividad 14 Ángular</h1>
+    <h2 class="text-primary text-center">Registro de personas </h2>
+    <label for="nombre">Nombre:</label>
+    <input [(ngModel)]="nombre" name="nombre" class="form-control border border-secondary">
     <br>
-    <label>DNI:</label>
-    <input [(ngModel)]="dni" name="dni" class="form-control">
+    <label for="dni">DNI:</label>
+    <input [(ngModel)]="dni" name="dni" class="form-control border border-secondary">
     <br>
-    <label>Estado Civil:</label>
-    <select [(ngModel)]="estadoCivil" name="estadoCivil" class="form-select">
-    <option value="soltero">Soltero</option>
-    <option value="casado">Casado</option>
+    <label for="estadoCivil">Estado Civil:</label>
+    <select [(ngModel)]="estadoCivil" name="estadoCivil" class="form-select border border-secondary">
+    <option value="soltero" class="bg-success border border-secondary">Soltero</option>
+    <option value="casado" class="bg-success border border-secondary">Casado</option>
     </select>
-    <br>
-    <button (click)="enviarDatos()" class="btn btn-success">Enviar</button>
+    <section class="abs-center"  role="group">
+        <input type="button" value="Enviar" (click)="enviarDatos()" class="btn btn-success">
+    </section>
+    
 </form>
     
     <app-hijo [datosForm]="datos"></app-hijo>
